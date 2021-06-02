@@ -16,13 +16,14 @@ services:
       - '1113:1113'
       - '2113:2113'
     volumes:
-      - type: volume
-        source: eventstore-volume-data
-        target: /var/lib/eventstore
-      - type: volume
-        source: eventstore-volume-logs
-        target: /var/log/eventstore
-
-volumes:
-  eventstore-volume-data:
-  eventstore-volume-logs:
+      - ./data:/var/lib/eventstore
+      - ./logs:/var/log/eventstore
+      # - type: volume
+      #   source: eventstore-volume-data
+      #   target: /var/lib/eventstore
+      # - type: volume
+      #   source: eventstore-volume-logs
+      #   target: /var/log/eventstore
+# volumes:
+#   eventstore-volume-data:
+#   eventstore-volume-logs:
