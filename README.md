@@ -14,3 +14,7 @@ npm run test
 ## Facts
 
 1. const event = jsonEvent({ id: cuid() }) - wrong, id - accept guid only
+
+## Resources
+
+- https://gist.github.com/unlight/27dbe8693abd6b483c72b5abb1f9450d
