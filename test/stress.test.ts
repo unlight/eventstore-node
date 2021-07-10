@@ -36,6 +36,7 @@ describe('stress eventstore', (): void => {
             });
 
             const result = await client.appendToStream(streamName, event);
+            // client.createOneTimeProjection()
         }
     });
 });

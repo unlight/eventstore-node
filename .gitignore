@@ -262,5 +262,4 @@ temp/
 # End of https://www.toptal.com/developers/gitignore/api/node,jetbrains+all,visualstudiocode,macos
 
 ~*
-data
-logs
+eventstore_data

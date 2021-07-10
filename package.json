@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ts-mocha test/*.ts",
+    "test": "npm run test:r",
     "test:r": "node -r ts-node/register/transpile-only node_modules/mocha/bin/_mocha test/*.ts",
-    "test:w": "npm run test:r -- --watch --watch-files test/*.ts",
-    "prepare": "husky install"
+    "test:w": "npm run test:r -- --watch --watch-files test/*.ts"
   },
   "repository": {
     "type": "git",
@@ -23,25 +22,24 @@
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@types/mocha": "^8.2.2",
-    "@types/node": "10",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
+    "@types/mocha": "^8.2.3",
+    "@types/node": "16",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
     "cuid": "^2.1.8",
-    "eslint": "^7.27.0",
+    "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-watch": "^7.0.0",
-    "husky": "^6.0.0",
-    "mocha": "^8.4.0",
-    "nodemon": "^2.0.7",
-    "prettier": "^2.3.0",
+    "mocha": "8",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
     "should": "^13.2.3",
-    "ts-mocha": "^8.0.0",
-    "typescript": "^4.3.2"
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@eventstore/db-client": "^1.2.1"
+    "@eventstore/db-client": "^1.2.2"
   }
 }
