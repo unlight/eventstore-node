@@ -6,8 +6,7 @@ import {
     JSONEventType,
 } from '@eventstore/db-client';
 
-import should from 'should';
-require('should');
+import expect from 'expect';
 
 const client = new EventStoreDBClient(
     {
@@ -65,7 +64,7 @@ describe('eventstore', (): void => {
             maxCount: 10,
         });
 
-        events.length.should.equal(1);
+        expect(events).toHaveLength(1);
 
         const reservation = events.reduce<Partial<Reservation>>((acc, { event }) => {
             switch (event?.type) {

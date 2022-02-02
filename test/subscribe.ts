@@ -21,7 +21,7 @@ describe('subscribe', () => {
         client
             .subscribeToAll({ fromPosition: END })
             .once('data', event => {
-                console.log('subscribeToAll event', event);
+                // console.log('subscribeToAll event', event);
             })
             .on('error', console.log);
         client
