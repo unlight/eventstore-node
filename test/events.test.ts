@@ -6,9 +6,6 @@ import {
   JSONEventType
 } from '@eventstore/db-client'
 
-import should from 'should'
-require('should')
-
 const client = new EventStoreDBClient(
   {
     endpoint: 'localhost:2113'
