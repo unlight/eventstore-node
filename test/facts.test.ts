@@ -1,6 +1,6 @@
 import { EventStoreDBClient, jsonEvent } from '@eventstore/db-client';
 
-describe.only('facts', () => {
+describe('facts', () => {
   let client: EventStoreDBClient;
   before(() => {
     client = new EventStoreDBClient(
