@@ -45,8 +45,9 @@ describe('todo list', (): void => {
       }),
     ];
     await client.appendToStream(stream, events);
+    type Events = (typeof events)[number];
 
-    const streamIter = client.readStream<ItemAdded | ItemResolved>(stream, {
+    const streamIter = client.readStream<Events>(stream, {
       fromRevision: START,
       direction: FORWARDS,
     });
